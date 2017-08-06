@@ -4,4 +4,4 @@ branches:
   only:
     - master
 xcode_project: UnitTestDemo.xcodeproj
-xcode_scheme: UnitTestDemoTests
+xcode_scheme: UnitTestDemo

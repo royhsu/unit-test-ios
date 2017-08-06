@@ -158,7 +158,6 @@
 				TargetAttributes = {
 					B0DDF5291F3753600032FA61 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 5CE6946X84;
 						ProvisioningStyle = Automatic;
 					};
 					B0DDF5421F3754220032FA61 = {
@@ -360,7 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5CE6946X84;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UnitTestDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinyworld.UnitTestDemo;
@@ -373,7 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5CE6946X84;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UnitTestDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinyworld.UnitTestDemo;
