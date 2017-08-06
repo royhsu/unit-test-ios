@@ -6,3 +6,9 @@ branches:
 xcode_project: UnitTestDemo.xcodeproj
 xcode_scheme: UnitTestDemo
 xcode_sdk: iphonesimulator10.3
+script: xcodebuild clean \
+  && xcodebuild test \
+  -project UnitTestDemo.xcodeproj \
+  -scheme UnitTestDemo \
+  -sdk iphonesimulator \
+  -destination 'platform=iOS Simulator,name=iPhone 7 Plus,OS=10.3.1' CODE_SIGNING_REQUIRED=NO
