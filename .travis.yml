@@ -5,3 +5,4 @@ branches:
     - master
 xcode_project: UnitTestDemo.xcodeproj
 xcode_scheme: UnitTestDemo
+xcode_sdk: iphonesimulator10.3
