@@ -40,7 +40,9 @@ final class JSONHelperTests: XCTestCase {
         
         let promise = expectation(description: "Load local json file.")
         
-        helper!.loadJSON(name: "Demo") { result in
+        let testBundle = Bundle(for: classForCoder.self)
+        
+        helper!.loadJSON(name: "Demo", from: testBundle) { result in
             
             promise.fulfill()
             

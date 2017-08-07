@@ -30,12 +30,12 @@ struct JSONHelper {
     
     typealias LoadJSONCompletion = (LoadJSONResult) -> Void
     
-    func loadJSON(name: String, completion: @escaping LoadJSONCompletion) {
+    func loadJSON(name: String, from bundle: Bundle, completion: @escaping LoadJSONCompletion) {
         
         DispatchQueue.global(qos: .background).async {
             
             guard
-                let filePath = Bundle.main.path(forResource: name, ofType: "json")
+                let filePath = bundle.path(forResource: name, ofType: "json")
                 else {
                     
                     DispatchQueue.main.async {

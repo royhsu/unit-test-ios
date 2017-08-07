@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B097B1EA1F38366A003B8A06 /* Demo.json in Resources */ = {isa = PBXBuildFile; fileRef = B097B1E91F38366A003B8A06 /* Demo.json */; };
 		B0DDF52E1F3753600032FA61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DDF52D1F3753600032FA61 /* AppDelegate.swift */; };
 		B0DDF5301F3753600032FA61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DDF52F1F3753600032FA61 /* ViewController.swift */; };
 		B0DDF5331F3753600032FA61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0DDF5311F3753600032FA61 /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		B0DDF5501F3754990032FA61 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DDF54F1F3754990032FA61 /* Calculator.swift */; };
 		B0DDF5521F37574C0032FA61 /* JSONHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DDF5511F37574C0032FA61 /* JSONHelperTests.swift */; };
 		B0DDF5541F3757CA0032FA61 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DDF5531F3757CA0032FA61 /* JSONHelper.swift */; };
-		B0DDF5561F375DC40032FA61 /* Demo.json in Resources */ = {isa = PBXBuildFile; fileRef = B0DDF5551F375DC40032FA61 /* Demo.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B097B1E91F38366A003B8A06 /* Demo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Demo.json; sourceTree = "<group>"; };
 		B0DDF52A1F3753600032FA61 /* UnitTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0DDF52D1F3753600032FA61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0DDF52F1F3753600032FA61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		B0DDF54F1F3754990032FA61 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		B0DDF5511F37574C0032FA61 /* JSONHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelperTests.swift; sourceTree = "<group>"; };
 		B0DDF5531F3757CA0032FA61 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
-		B0DDF5551F375DC40032FA61 /* Demo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Demo.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,6 @@
 				B0DDF54F1F3754990032FA61 /* Calculator.swift */,
 				B0DDF5531F3757CA0032FA61 /* JSONHelper.swift */,
 				B0DDF52F1F3753600032FA61 /* ViewController.swift */,
-				B0DDF5551F375DC40032FA61 /* Demo.json */,
 				B0DDF5311F3753600032FA61 /* Main.storyboard */,
 				B0DDF5341F3753600032FA61 /* Assets.xcassets */,
 				B0DDF5361F3753600032FA61 /* LaunchScreen.storyboard */,
@@ -101,6 +100,7 @@
 		B0DDF5441F3754220032FA61 /* UnitTestDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				B097B1E91F38366A003B8A06 /* Demo.json */,
 				B0DDF54D1F3754410032FA61 /* CaculatorTests.swift */,
 				B0DDF5511F37574C0032FA61 /* JSONHelperTests.swift */,
 				B0DDF5471F3754220032FA61 /* Info.plist */,
@@ -195,7 +195,6 @@
 			files = (
 				B0DDF5381F3753600032FA61 /* LaunchScreen.storyboard in Resources */,
 				B0DDF5351F3753600032FA61 /* Assets.xcassets in Resources */,
-				B0DDF5561F375DC40032FA61 /* Demo.json in Resources */,
 				B0DDF5331F3753600032FA61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B097B1EA1F38366A003B8A06 /* Demo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
