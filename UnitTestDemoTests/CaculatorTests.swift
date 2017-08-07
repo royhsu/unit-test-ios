@@ -39,8 +39,13 @@ final class CaculatorTests: XCTestCase {
     func testAdd() {
         
         XCTAssertEqual(
-            calculator!.add(3, 5),
-            8
+            calculator!.add(8, 9),
+            17
+        )
+        
+        XCTAssertEqual(
+            calculator!.add(9, 8),
+            17
         )
         
     }
