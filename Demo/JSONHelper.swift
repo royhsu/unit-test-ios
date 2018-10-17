@@ -1,12 +1,10 @@
 //
 //  JSONHelper.swift
-//  UnitTestDemo
+//  Demo
 //
-//  Created by Roy Hsu on 06/08/2017.
-//  Copyright © 2017 TinyWorld. All rights reserved.
+//  Created by Roy Hsu on 2018/10/17.
+//  Copyright © 2018 TinyWorld. All rights reserved.
 //
-
-// MARK: - JSONHelper
 
 import Foundation
 
@@ -26,12 +24,10 @@ struct JSONHelper {
         
     }
     
-    typealias LoadJSONCompletion = (LoadJSONResult) -> Void
-    
     func loadJSON(
         name: String,
         from bundle: Bundle,
-        completion: @escaping LoadJSONCompletion
+        completion: @escaping (_ result: LoadJSONResult) -> Void
     ) {
         
         DispatchQueue.global(qos: .background).async {
@@ -73,7 +69,7 @@ struct JSONHelper {
                 
             }
             catch {
-            
+                
                 DispatchQueue.main.async {
                     
                     completion(
@@ -81,7 +77,7 @@ struct JSONHelper {
                     )
                     
                 }
-            
+                
             }
             
         }
