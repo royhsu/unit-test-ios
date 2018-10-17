@@ -10,8 +10,6 @@
 
 struct Calculator {
     
-    // MARK: Add
-    
     func add(_ x: Int, _ y: Int) -> Int {
         
         return x + y
