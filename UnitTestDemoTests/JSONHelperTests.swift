@@ -12,15 +12,12 @@ import XCTest
 
 @testable import UnitTestDemo
 
-final class JSONHelperTests: XCTestCase {
-    
-    // MARK: Property
+class JSONHelperTests: XCTestCase {
     
     var helper: JSONHelper?
     
-    // MARK: Set Up
-    
     override func setUp() {
+        
         super.setUp()
         
         helper = JSONHelper()
@@ -32,17 +29,17 @@ final class JSONHelperTests: XCTestCase {
         helper = nil
         
         super.tearDown()
+        
     }
-    
-    // MARK: Post
     
     func testLoadJSON() {
         
         let promise = expectation(description: "Load local json file.")
         
-        let testBundle = Bundle(for: classForCoder.self)
-        
-        helper!.loadJSON(name: "Demo", from: testBundle) { result in
+        helper!.loadJSON(
+            name: "Demo",
+            from: Bundle(for: JSONHelperTests.self)
+        ) { result in
             
             promise.fulfill()
             
@@ -50,26 +47,25 @@ final class JSONHelperTests: XCTestCase {
                 
             case .success(let json):
                 
-                let object = json as? [String: Any]
+                let json = json as? [String: Any]
                 
-                XCTAssertNotNil(object)
-                
-                let message = object!["message"] as? String
+                let message = json?["message"] as? String
                 
                 XCTAssertEqual(
                     message,
                     "hello world"
                 )
             
-            case .failure(let error):
-                
-                XCTFail("\(error)")
+            case .failure(let error): XCTFail("\(error)")
                 
             }
             
         }
         
-        wait(for: [ promise ], timeout: 10.0)
+        wait(
+            for: [ promise ],
+            timeout: 10.0
+        )
         
     }
     

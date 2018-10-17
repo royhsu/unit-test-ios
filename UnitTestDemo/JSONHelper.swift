@@ -12,8 +12,6 @@ import Foundation
 
 struct JSONHelper {
     
-    // MARK: Post
-    
     enum LoadJSONResult {
         
         case success(Any)
@@ -30,25 +28,32 @@ struct JSONHelper {
     
     typealias LoadJSONCompletion = (LoadJSONResult) -> Void
     
-    func loadJSON(name: String, from bundle: Bundle, completion: @escaping LoadJSONCompletion) {
+    func loadJSON(
+        name: String,
+        from bundle: Bundle,
+        completion: @escaping LoadJSONCompletion
+    ) {
         
         DispatchQueue.global(qos: .background).async {
             
             guard
-                let filePath = bundle.path(forResource: name, ofType: "json")
-                else {
+                let filePath = bundle.path(
+                    forResource: name,
+                    ofType: "json"
+                )
+            else {
+                
+                DispatchQueue.main.async {
                     
-                    DispatchQueue.main.async {
-                        
-                        completion(
-                            .failure(LoadJSONError.fileNotFound)
-                        )
-                        
-                    }
-                    
-                    return
+                    completion(
+                        .failure(LoadJSONError.fileNotFound)
+                    )
                     
                 }
+                
+                return
+                
+            }
             
             let fileURL = URL(fileURLWithPath: filePath)
             
@@ -66,7 +71,8 @@ struct JSONHelper {
                     
                 }
                 
-            } catch {
+            }
+            catch {
             
                 DispatchQueue.main.async {
                     

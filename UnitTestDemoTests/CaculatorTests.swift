@@ -12,39 +12,14 @@ import XCTest
 
 @testable import UnitTestDemo
 
-final class CaculatorTests: XCTestCase {
-    
-    // MARK: Property
-    
-    var calculator: Calculator?
-    
-    // MARK: Set Up
-    
-    override func setUp() {
-        super.setUp()
-        
-        calculator = Calculator()
-        
-    }
-    
-    override func tearDown() {
-        
-        calculator = nil
-        
-        super.tearDown()
-    }
-    
-    // MARK: Add
+class CaculatorTests: XCTestCase {
     
     func testAdd() {
         
-        XCTAssertEqual(
-            calculator!.add(8, 9),
-            17
-        )
+        let calculator = Calculator()
         
         XCTAssertEqual(
-            calculator!.add(9, 8),
+            calculator.add(8, 9),
             17
         )
         
